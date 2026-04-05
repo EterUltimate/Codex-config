@@ -37,10 +37,19 @@
      - 无需安装 .NET Runtime
      ```
 
-3. **上传 EXE 文件**
+3. **上传 EXE 文件**（建议同时上传两个版本）
+   
+   **版本 1: 完整独立版** (推荐)
    - 点击 "Attach binaries by dropping them here or selecting them"
    - 选择文件: `publish\WinFormsApp1.exe`
-   - 等待上传完成
+   - 重命名为: `WinFormsApp1-Standalone.exe` (可选)
+   - 等待上传完成 (~111 MB)
+   
+   **版本 2: 轻量版**
+   - 再次点击附加文件
+   - 选择文件: `publish-lightweight\WinFormsApp1.exe`
+   - 重命名为: `WinFormsApp1-Lightweight.exe` (可选)
+   - 等待上传完成 (~0.75 MB)
 
 4. **发布**
    - 勾选 "Set as the latest release"
@@ -58,11 +67,21 @@ gh release create v1.0.0 `
 
 ## EXE 文件信息
 
+### 完整独立版 (Standalone)
 - **文件位置**: `publish\WinFormsApp1.exe`
 - **文件大小**: ~111 MB
 - **类型**: 独立单文件应用（包含 .NET Runtime）
 - **平台**: Windows x64
 - **运行要求**: Windows 10/11，无需安装额外依赖
+- **推荐**: ✅ 适合大多数用户
+
+### 轻量版 (Lightweight)
+- **文件位置**: `publish-lightweight\WinFormsApp1.exe`
+- **文件大小**: ~0.75 MB (比完整版小 99%)
+- **类型**: 依赖框架的单文件应用
+- **平台**: Windows x64
+- **运行要求**: Windows 10/11 + **.NET 10.0 Desktop Runtime**
+- **推荐**: 适合已安装 .NET 的用户或开发者
 
 ## 下载链接
 
