@@ -1,6 +1,8 @@
 # Codex 配置工具
 
 一个用于管理 Codex API 配置的 Windows Forms 应用程序。
+<img width="887" height="976" alt="image" src="https://github.com/user-attachments/assets/5e7199da-a153-4de4-af6a-b44d2f9783e0" />
+
 
 ## 功能特性
 
